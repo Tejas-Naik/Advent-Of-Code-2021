@@ -8,11 +8,12 @@ for inp in content:
     if 'forward' in inp:
         splitted_inp = inp.split()
         horizontal += int(splitted_inp[-1])
+        depth += aim * int(splitted_inp[-1])
     elif 'down' in inp:
         splitted_inp = inp.split()
-        depth += int(splitted_inp[-1])
+        aim += int(splitted_inp[-1])
     elif 'up' in inp:
         splitted_inp = inp.split()
-        depth -= int(splitted_inp[-1])
+        aim -= int(splitted_inp[-1])
 
 print(horizontal * depth)
